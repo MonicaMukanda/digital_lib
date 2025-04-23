@@ -39,12 +39,12 @@ cd digital-library
 ### 2. Install dependencies
 npm install
 
-###3. Start your MySQL server
+### 3. Start your MySQL server
 Create a MySQL database named digital_library and run the SQL script to create tables (users, resources, notes, etc.).
 
 Update db.js with your MySQL login credentials.
 
-###4. Start the application
+### 4. Start the application
 node app.js
 Visit:
 http://localhost:3000
