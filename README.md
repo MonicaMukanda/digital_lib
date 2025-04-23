@@ -36,7 +36,7 @@ A web-based digital library system built using **Node.js**, **Express**, **MySQL
 git clone https://github.com/your-username/digital-library.git
 cd digital-library
 
-###2.Install dependencies
+### 2. Install dependencies
 npm install
 
 ###3. Start your MySQL server
