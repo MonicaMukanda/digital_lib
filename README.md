@@ -35,8 +35,10 @@ A web-based digital library system built using **Node.js**, **Express**, **MySQL
 
 git clone https://github.com/your-username/digital-library.git
 cd digital-library
+
 ###2.Install dependencies
 npm install
+
 ###3. Start your MySQL server
 Create a MySQL database named digital_library and run the SQL script to create tables (users, resources, notes, etc.).
 
