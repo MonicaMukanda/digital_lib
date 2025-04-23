@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Community Notes</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>Community Notes</h2>
+
+  <form method="post" action="/notes">
+    <textarea name="comment" placeholder="Write your thoughts..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Recent Notes</h3>
+  <ul>
+    <% if (typeof notes !== 'undefined' && notes.length > 0) { %>
+      <% notes.forEach(note => { %>
+        <li><strong><%= note.username %>:</strong> <%= note.comment %></li>
+      <% }) %>
+    <% } else { %>
+      <li>No notes posted yet.</li>
+    <% } %>
+  </ul>
+
+  <p><a href="/dashboard">Back to Dashboard</a></p>
+</body>
+</html>

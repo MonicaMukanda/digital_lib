@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - Digital Library</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>Welcome, <%= user.username %>!</h2>
+
+<% if (user.role === 'admin') { %>
+  <p><a href="/upload">Upload New Resource</a></p>
+<% } %>
+
+<form method="get" action="/dashboard">
+  <input type="text" name="search" placeholder="Search resources..." value="<%= typeof search !== 'undefined' ? search : '' %>">
+  <button type="submit">Search</button>
+</form>
+
+  <h3>Library Resources</h3>
+  <ul>
+    <% resources.forEach(res => { %>
+      <li>
+        <strong><%= res.title %></strong> - <%= res.description %>
+        [<a href="/uploads/<%= res.file_path %>" download>Download</a>]
+
+        <% if (user.role === 'admin') { %>
+          | <a href="/delete/<%= res.resource_id %>" onclick="return confirm('Are you sure?')">Delete</a>
+        <% } %>
+      </li>
+    <% }); %>
+  </ul>
+
+  <p><a href="/notes">Community Notes</a> | <a href="/logout">Logout</a></p>
+</body>
+</html>
