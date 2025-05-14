@@ -33,8 +33,8 @@ A web-based digital library system built using **Node.js**, **Express**, **MySQL
 
 ### 1. Clone the repository
 
-git clone https://github.com/your-username/digital-library.git
-cd digital-library
+git clone https://github.com/MonicaMukanda/digital-lib.git
+cd digital-lib
 
 ### 2. Install dependencies
 npm install
